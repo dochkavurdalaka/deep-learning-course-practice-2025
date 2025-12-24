@@ -7574,7 +7574,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -7584,12 +7584,11 @@ a.anchor-link {
 <span class="n">mnist</span> <span class="o">=</span> <span class="n">fetch_openml</span><span class="p">(</span><span class="s1">'mnist_784'</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">mnist</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span> <span class="o">/</span> <span class="mf">255.0</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">mnist</span><span class="o">.</span><span class="n">target</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">))</span>
-<span class="n">y_one_hot</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">10</span><span class="p">)[</span><span class="n">y</span><span class="p">]</span>
 
 
 <span class="n">x_train</span><span class="p">,</span> <span class="n">x_test</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:</span><span class="mi">60000</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="mi">60000</span><span class="p">:]</span>
 <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">y</span><span class="p">[:</span><span class="mi">60000</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="mi">60000</span><span class="p">:]</span>
-<span class="n">y_one_hot_train</span><span class="p">,</span> <span class="n">y_one_hot_test</span> <span class="o">=</span> <span class="n">y_one_hot</span><span class="p">[:</span><span class="mi">60000</span><span class="p">],</span> <span class="n">y_one_hot</span><span class="p">[</span><span class="mi">60000</span><span class="p">:]</span>
+<span class="n">y_one_hot_train</span><span class="p">,</span> <span class="n">y_one_hot_test</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">10</span><span class="p">)[</span><span class="n">y_train</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">10</span><span class="p">)[</span><span class="n">y_test</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -7611,7 +7610,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
@@ -7657,7 +7656,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">norm_grad</span><span class="p">(</span><span class="n">grad</span><span class="p">,</span> <span class="n">max_grad</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
@@ -7689,7 +7688,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">ReLU</span><span class="p">:</span>
@@ -7768,7 +7767,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Sequential</span><span class="p">:</span>
@@ -7813,7 +7812,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">softmax_cross_entropy_loss</span><span class="p">(</span><span class="n">logits</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">eps</span><span class="o">=</span><span class="mf">1e-8</span><span class="p">):</span>
@@ -7870,7 +7869,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1">#learning rate</span>
@@ -7888,15 +7887,14 @@ a.anchor-link {
 	<span class="n">Linear</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
 <span class="p">])</span>
 
-
 <span class="c1">#training</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">steps</span><span class="p">):</span>
 	<span class="n">epoch_loss</span> <span class="o">=</span> <span class="mi">0</span>
-	<span class="n">permutation</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-	<span class="n">x_shuffled</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">permutation</span><span class="p">]</span>
-	<span class="n">y_shuffled</span> <span class="o">=</span> <span class="n">y_one_hot</span><span class="p">[</span><span class="n">permutation</span><span class="p">]</span>
+	<span class="n">permutation</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="n">x_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+	<span class="n">x_shuffled</span> <span class="o">=</span> <span class="n">x_train</span><span class="p">[</span><span class="n">permutation</span><span class="p">]</span>
+	<span class="n">y_shuffled</span> <span class="o">=</span> <span class="n">y_one_hot_train</span><span class="p">[</span><span class="n">permutation</span><span class="p">]</span>
 
-	<span class="k">for</span> <span class="n">start</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">batch_size</span><span class="p">):</span>
+	<span class="k">for</span> <span class="n">start</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">x_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">batch_size</span><span class="p">):</span>
 		<span class="n">end</span> <span class="o">=</span> <span class="n">start</span> <span class="o">+</span> <span class="n">batch_size</span>
 		<span class="n">x_batch</span> <span class="o">=</span> <span class="n">x_shuffled</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span>
 		<span class="n">y_batch</span> <span class="o">=</span> <span class="n">y_shuffled</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">]</span>
@@ -7930,27 +7928,27 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Step 1, Loss: 369.90817343237217
-Step 2, Loss: 186.01526485647256
-Step 3, Loss: 135.25350143624763
-Step 4, Loss: 107.6941567003655
-Step 5, Loss: 88.83402716221147
-Step 6, Loss: 76.28606840024095
-Step 7, Loss: 65.74464305923713
-Step 8, Loss: 58.12385047854379
-Step 9, Loss: 51.60970786454041
-Step 10, Loss: 45.89180901010319
-Step 11, Loss: 41.613604076033724
-Step 12, Loss: 37.34494141890648
-Step 13, Loss: 33.783755652997556
-Step 14, Loss: 30.868342910758862
-Step 15, Loss: 27.523573873983555
-Step 16, Loss: 25.397168207918778
-Step 17, Loss: 23.046472717024304
-Step 18, Loss: 21.16139365725355
-Step 19, Loss: 19.375370135299576
-Step 20, Loss: 17.690464780002916
-Правильных ответов: 59881 из 60000
+<pre>Step 1, Loss: 337.48959475877564
+Step 2, Loss: 171.85285498274044
+Step 3, Loss: 126.77412821530562
+Step 4, Loss: 101.14772865523761
+Step 5, Loss: 83.25787526873567
+Step 6, Loss: 71.37723016645967
+Step 7, Loss: 62.11800696579212
+Step 8, Loss: 54.81751255098959
+Step 9, Loss: 48.55861879964823
+Step 10, Loss: 43.746587353261475
+Step 11, Loss: 39.488923027501215
+Step 12, Loss: 35.2920001710697
+Step 13, Loss: 32.0456049867895
+Step 14, Loss: 28.961180556848518
+Step 15, Loss: 26.452872024118946
+Step 16, Loss: 24.24661087360945
+Step 17, Loss: 22.06047850737061
+Step 18, Loss: 20.345497648236876
+Step 19, Loss: 18.40194235114789
+Step 20, Loss: 17.019748358986675
+Правильных ответов: 59880 из 60000
 Точность: 99.80%
 </pre>
 </div>
@@ -7973,7 +7971,7 @@ Step 20, Loss: 17.690464780002916
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="n">predicted_labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">model</span><span class="p">(</span><span class="n">x_test</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -7994,8 +7992,8 @@ Step 20, Loss: 17.690464780002916
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Правильных ответов: 9983 из 10000
-Точность: 99.83%
+<pre>Правильных ответов: 9803 из 10000
+Точность: 98.03%
 </pre>
 </div>
 </div>
